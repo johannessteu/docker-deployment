@@ -1,7 +1,8 @@
 # DOCKER-VERSION 1.2.0
 
-FROM ubuntu
+FROM jenkins
 MAINTAINER Johannes Steu <js@johannessteu.de>
+USER root
 
 RUN apt-get update && apt-get -y install git apache2 php5 curl && apt-get clean
 RUN echo 'date.timezone = "Europe/Berlin"' >> /etc/php5/cli/php.ini
