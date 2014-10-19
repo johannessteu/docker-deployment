@@ -4,7 +4,7 @@ FROM jenkins
 MAINTAINER Johannes Steu <js@johannessteu.de>
 USER root
 
-RUN apt-get update && apt-get -y install git apache2 php5 curl && apt-get clean
+RUN apt-get update && apt-get -y install git apache2 php5 curl expect && apt-get clean
 RUN echo 'date.timezone = "Europe/Berlin"' >> /etc/php5/cli/php.ini
 RUN mkdir -p /root/.ssh
 RUN chmod 700 /root/.ssh
